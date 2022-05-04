@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\yanat\Documents\KiCad\ZK80\ZK80.sch</source>
+    <date>2022/04/07 8:36:42</date>
+    <tool>Eeschema (5.1.9)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>ZK80 With SD</title>
+        <company/>
+        <rev>Rev1.0</rev>
+        <date/>
+        <source>ZK80.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U1">
+      <value>OSL40562-IRA</value>
+      <footprint>Display_7Segment:CA56-12EWA</footprint>
+      <datasheet>http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf</datasheet>
+      <libsource lib="Display_Character" part="CA56-12EWA" description="4 digit 7 segment high efficiency red LED, common anode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6248B172</tstamp>
+    </comp>
+    <comp ref="U2">
+      <value>OSL40562-LRA</value>
+      <footprint>Display_7Segment:CA56-12EWA</footprint>
+      <datasheet>http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf</datasheet>
+      <libsource lib="Display_Character" part="CC56-12EWA" description="4 digit 7 segment high efficiency red LED, common cathode"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6248BE52</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>330</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>624AC392</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>330</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>624AF6A0</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>330</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>624B0CC0</tstamp>
+    </comp>
+    <comp ref="R5">
+      <value>330</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>624B2411</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>AE-MICRO-SD-DIP</value>
+      <footprint>KUT_Connector:AE-MICRO-SD-DIP</footprint>
+      <datasheet>https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&amp;item_id=195&amp;is_series=1</datasheet>
+      <libsource lib="Connector" part="Micro_SD_Card_Det" description="Micro SD Card Socket with card detection pins"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>624914F2</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>ICSP</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>624BABC1</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>MRUSB-2B-D14NI-S306</value>
+      <footprint>vsrAkizuki:MRUSB-2B-D14NI-S306</footprint>
+      <libsource lib="vsrAkizuki" part="MRUSB-2B-D14NI-S306" description="USB micro power connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>624F16B1</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>10uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62515FB8</tstamp>
+    </comp>
+    <comp ref="C6">
+      <value>10uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62516F30</tstamp>
+    </comp>
+    <comp ref="S2">
+      <value>SLIDE_SWITCH_3P</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Memory_RAM2" part="SLIDE_SWITCH_3P" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6251FF27</tstamp>
+    </comp>
+    <comp ref="LS1">
+      <value>Speaker</value>
+      <footprint>Package_TO_SOT_THT:TO-5-2</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="Speaker" description="Speaker"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6256C062</tstamp>
+    </comp>
+    <comp ref="R6">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62583A7A</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>625948B1</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>625AA2ED</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>KeyBoard</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x07_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_02x07_Odd_Even" description="Generic connector, double row, 02x07, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>625EBD3D</tstamp>
+    </comp>
+    <comp ref="S1">
+      <value>SLIDE_SWITCH_3P</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical</footprint>
+      <libsource lib="Memory_RAM2" part="SLIDE_SWITCH_3P" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6276B9BC</tstamp>
+    </comp>
+    <comp ref="R7">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6278C7B4</tstamp>
+    </comp>
+    <comp ref="R8">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6278CAFE</tstamp>
+    </comp>
+    <comp ref="R9">
+      <value>10k</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6278CB08</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>330</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6282C0D9</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>0.1uF</value>
+      <footprint>Capacitor_THT:C_Rect_L4.0mm_W2.5mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>628850DF</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>10uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP" description="Polarized capacitor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>628866E3</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>PIC32MX170F256B</value>
+      <footprint>Package_DIP:DIP-28_W7.62mm_LongPads</footprint>
+      <libsource lib="Memory_RAM2" part="PIC32MX170F256B" description="32-bit Microcontrollers"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>625FE804</tstamp>
+    </comp>
+    <comp ref="U4">
+      <value>7333-A</value>
+      <footprint>Package_TO_SOT_THT:TO-92_Inline_Wide</footprint>
+      <datasheet>http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf</datasheet>
+      <libsource lib="Memory_RAM2" part="7333-A" description="Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62645E33</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Micro_SD_Card_Det">
+      <aliases>
+        <alias>Micro_SD_Card_Det_Hirose_DM3AT</alias>
+      </aliases>
+      <description>Micro SD Card Socket with card detection pins</description>
+      <docs>https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&amp;item_id=195&amp;is_series=1</docs>
+      <footprints>
+        <fp>microSD*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Micro_SD_Card_Det</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DAT2" type="BiDi"/>
+        <pin num="2" name="DAT3/CD" type="BiDi"/>
+        <pin num="3" name="CMD" type="input"/>
+        <pin num="4" name="VDD" type="power_in"/>
+        <pin num="5" name="CLK" type="input"/>
+        <pin num="6" name="VSS" type="power_in"/>
+        <pin num="7" name="DAT0" type="BiDi"/>
+        <pin num="8" name="DAT1" type="BiDi"/>
+        <pin num="9" name="DET_B" type="passive"/>
+        <pin num="10" name="DET_A" type="passive"/>
+        <pin num="11" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x07_Odd_Even">
+      <description>Generic connector, double row, 02x07, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x07_Odd_Even</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+        <pin num="9" name="Pin_9" type="passive"/>
+        <pin num="10" name="Pin_10" type="passive"/>
+        <pin num="11" name="Pin_11" type="passive"/>
+        <pin num="12" name="Pin_12" type="passive"/>
+        <pin num="13" name="Pin_13" type="passive"/>
+        <pin num="14" name="Pin_14" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP">
+      <description>Polarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="Speaker">
+      <description>Speaker</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">LS</field>
+        <field name="Value">Speaker</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+        <pin num="2" name="2" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Display_Character" part="CA56-12EWA">
+      <description>4 digit 7 segment high efficiency red LED, common anode</description>
+      <docs>http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf</docs>
+      <footprints>
+        <fp>*CA56*12EWA*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CA56-12EWA</field>
+        <field name="Footprint">Display_7Segment:CA56-12EWA</field>
+      </fields>
+      <pins>
+        <pin num="1" name="e" type="input"/>
+        <pin num="2" name="d" type="input"/>
+        <pin num="3" name="DPX" type="input"/>
+        <pin num="4" name="c" type="input"/>
+        <pin num="5" name="g" type="input"/>
+        <pin num="6" name="CA4" type="input"/>
+        <pin num="7" name="b" type="input"/>
+        <pin num="8" name="CA3" type="input"/>
+        <pin num="9" name="CA2" type="input"/>
+        <pin num="10" name="f" type="input"/>
+        <pin num="11" name="a" type="input"/>
+        <pin num="12" name="CA1" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Display_Character" part="CC56-12EWA">
+      <description>4 digit 7 segment high efficiency red LED, common cathode</description>
+      <docs>http://www.kingbrightusa.com/images/catalog/SPEC/CA56-12EWA.pdf</docs>
+      <footprints>
+        <fp>*CA56*12EWA*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">CC56-12EWA</field>
+        <field name="Footprint">Display_7Segment:CA56-12EWA</field>
+      </fields>
+      <pins>
+        <pin num="1" name="e" type="input"/>
+        <pin num="2" name="d" type="input"/>
+        <pin num="3" name="DPX" type="input"/>
+        <pin num="4" name="c" type="input"/>
+        <pin num="5" name="g" type="input"/>
+        <pin num="6" name="CC4" type="input"/>
+        <pin num="7" name="b" type="input"/>
+        <pin num="8" name="CC3" type="input"/>
+        <pin num="9" name="CC2" type="input"/>
+        <pin num="10" name="f" type="input"/>
+        <pin num="11" name="a" type="input"/>
+        <pin num="12" name="CC1" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="Memory_RAM2" part="7333-A">
+      <description>Positive 1.5A 35V Linear Regulator, Fixed Output 5V, TO-220/TO-263/TO-252</description>
+      <docs>http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf</docs>
+      <footprints>
+        <fp>TO?252*</fp>
+        <fp>TO?263*</fp>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">7333-A</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="IN" type="power_in"/>
+        <pin num="3" name="OUT" type="power_out"/>
+      </pins>
+    </libpart>
+    <libpart lib="Memory_RAM2" part="PIC32MX170F256B">
+      <description>32-bit Microcontrollers</description>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">PIC32MX170F256B</field>
+        <field name="Footprint">Package_DIP:DIP-28_W7.62mm_LongPads</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~MCLR" type="input"/>
+        <pin num="2" name="RA0" type="BiDi"/>
+        <pin num="3" name="RA1" type="BiDi"/>
+        <pin num="4" name="RB0" type="BiDi"/>
+        <pin num="5" name="RB1" type="BiDi"/>
+        <pin num="6" name="RB2" type="BiDi"/>
+        <pin num="7" name="RB3" type="BiDi"/>
+        <pin num="8" name="VSS" type="power_in"/>
+        <pin num="9" name="RA2" type="BiDi"/>
+        <pin num="10" name="RA3" type="BiDi"/>
+        <pin num="11" name="RB4" type="BiDi"/>
+        <pin num="12" name="RA4" type="BiDi"/>
+        <pin num="13" name="VDD" type="power_in"/>
+        <pin num="14" name="RB5" type="BiDi"/>
+        <pin num="15" name="RB6" type="BiDi"/>
+        <pin num="16" name="RB7" type="BiDi"/>
+        <pin num="17" name="RB8" type="BiDi"/>
+        <pin num="18" name="RB9" type="BiDi"/>
+        <pin num="19" name="VSS" type="power_in"/>
+        <pin num="20" name="VCAP" type="input"/>
+        <pin num="21" name="RB10" type="BiDi"/>
+        <pin num="22" name="RB11" type="BiDi"/>
+        <pin num="23" name="RB12" type="BiDi"/>
+        <pin num="24" name="RB13" type="BiDi"/>
+        <pin num="25" name="RB14" type="BiDi"/>
+        <pin num="26" name="RB15" type="BiDi"/>
+        <pin num="27" name="AVSS" type="input"/>
+        <pin num="28" name="AVDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Memory_RAM2" part="SLIDE_SWITCH_3P">
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">SLIDE_SWITCH_3P</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+        <pin num="3" name="3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="vsrAkizuki" part="MRUSB-2B-D14NI-S306">
+      <description>USB micro power connector</description>
+      <footprints>
+        <fp>MRUSB-2B-D14NI*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">MRUSB-2B-D14NI-S306</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_out"/>
+        <pin num="2" name="VBUS" type="power_out"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="Display_Character">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Display_Character.lib</uri>
+    </library>
+    <library logical="Memory_RAM2">
+      <uri>C:\Users\yanat\Documents\KiCad\ZK80/Memory_RAM2.lib</uri>
+    </library>
+    <library logical="vsrAkizuki">
+      <uri>C:/Users/yanat/Documents/KiCad/ZK80/vsrKiCad-master/library/vsrAkizuki.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(J1-Pad5)">
+      <node ref="J1" pin="5"/>
+      <node ref="U1" pin="3"/>
+      <node ref="J4" pin="4"/>
+      <node ref="U3" pin="5"/>
+      <node ref="U2" pin="3"/>
+    </net>
+    <net code="2" name="GND">
+      <node ref="LS1" pin="2"/>
+      <node ref="U3" pin="27"/>
+      <node ref="J4" pin="13"/>
+      <node ref="U4" pin="1"/>
+      <node ref="J1" pin="3"/>
+      <node ref="U3" pin="8"/>
+      <node ref="C6" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="J3" pin="1"/>
+      <node ref="C3" pin="2"/>
+      <node ref="C2" pin="1"/>
+      <node ref="S1" pin="1"/>
+      <node ref="C1" pin="2"/>
+      <node ref="R6" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="J2" pin="6"/>
+      <node ref="U3" pin="19"/>
+    </net>
+    <net code="3" name="Net-(J1-Pad1)">
+      <node ref="R1" pin="1"/>
+      <node ref="U3" pin="1"/>
+      <node ref="J4" pin="14"/>
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="4" name="Net-(C4-Pad1)">
+      <node ref="U3" pin="20"/>
+      <node ref="C4" pin="1"/>
+    </net>
+    <net code="5" name="+3V3">
+      <node ref="J1" pin="2"/>
+      <node ref="U4" pin="3"/>
+      <node ref="U3" pin="28"/>
+      <node ref="R7" pin="1"/>
+      <node ref="R8" pin="1"/>
+      <node ref="R9" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C6" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="C2" pin="2"/>
+      <node ref="R1" pin="2"/>
+      <node ref="J2" pin="4"/>
+      <node ref="U3" pin="13"/>
+    </net>
+    <net code="6" name="Net-(LS1-Pad1)">
+      <node ref="LS1" pin="1"/>
+      <node ref="R6" pin="1"/>
+      <node ref="U3" pin="3"/>
+    </net>
+    <net code="7" name="Net-(S1-Pad2)">
+      <node ref="S1" pin="2"/>
+      <node ref="U3" pin="7"/>
+    </net>
+    <net code="8" name="Net-(J4-Pad12)">
+      <node ref="J4" pin="12"/>
+    </net>
+    <net code="9" name="Net-(J2-Pad8)">
+      <node ref="J2" pin="8"/>
+    </net>
+    <net code="10" name="Net-(J2-Pad7)">
+      <node ref="J2" pin="7"/>
+      <node ref="U3" pin="12"/>
+    </net>
+    <net code="11" name="Net-(R2-Pad1)">
+      <node ref="U3" pin="11"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="12" name="Net-(J1-Pad6)">
+      <node ref="J1" pin="6"/>
+    </net>
+    <net code="13" name="Net-(J2-Pad1)">
+      <node ref="J2" pin="1"/>
+    </net>
+    <net code="14" name="Net-(S1-Pad3)">
+      <node ref="S1" pin="3"/>
+    </net>
+    <net code="15" name="Net-(J2-Pad11)">
+      <node ref="J2" pin="11"/>
+    </net>
+    <net code="16" name="Net-(J2-Pad9)">
+      <node ref="J2" pin="9"/>
+    </net>
+    <net code="17" name="Net-(J2-Pad10)">
+      <node ref="J2" pin="10"/>
+    </net>
+    <net code="18" name="Net-(S2-Pad3)">
+      <node ref="S2" pin="3"/>
+    </net>
+    <net code="19" name="Net-(J2-Pad5)">
+      <node ref="J2" pin="5"/>
+      <node ref="U3" pin="26"/>
+    </net>
+    <net code="20" name="Net-(J4-Pad5)">
+      <node ref="U1" pin="5"/>
+      <node ref="U2" pin="5"/>
+      <node ref="J4" pin="5"/>
+      <node ref="U3" pin="25"/>
+    </net>
+    <net code="21" name="Net-(J4-Pad6)">
+      <node ref="J4" pin="6"/>
+      <node ref="U3" pin="24"/>
+      <node ref="U1" pin="10"/>
+      <node ref="U2" pin="10"/>
+    </net>
+    <net code="22" name="Net-(J4-Pad7)">
+      <node ref="J4" pin="7"/>
+      <node ref="U3" pin="23"/>
+      <node ref="U2" pin="1"/>
+      <node ref="U1" pin="1"/>
+    </net>
+    <net code="23" name="Net-(J4-Pad8)">
+      <node ref="J4" pin="8"/>
+      <node ref="U3" pin="22"/>
+      <node ref="U1" pin="2"/>
+      <node ref="U2" pin="2"/>
+    </net>
+    <net code="24" name="Net-(J4-Pad9)">
+      <node ref="U3" pin="21"/>
+      <node ref="U1" pin="4"/>
+      <node ref="J4" pin="9"/>
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="25" name="Net-(J2-Pad2)">
+      <node ref="U3" pin="2"/>
+      <node ref="J2" pin="2"/>
+    </net>
+    <net code="26" name="Net-(J4-Pad10)">
+      <node ref="J4" pin="10"/>
+      <node ref="U2" pin="7"/>
+      <node ref="U3" pin="18"/>
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="27" name="Net-(J2-Pad3)">
+      <node ref="U3" pin="17"/>
+      <node ref="J2" pin="3"/>
+    </net>
+    <net code="28" name="Net-(R5-Pad1)">
+      <node ref="U3" pin="16"/>
+      <node ref="R5" pin="1"/>
+    </net>
+    <net code="29" name="Net-(R4-Pad1)">
+      <node ref="R4" pin="1"/>
+      <node ref="U3" pin="15"/>
+    </net>
+    <net code="30" name="Net-(R3-Pad1)">
+      <node ref="R3" pin="1"/>
+      <node ref="U3" pin="14"/>
+    </net>
+    <net code="31" name="Net-(J4-Pad3)">
+      <node ref="U3" pin="6"/>
+      <node ref="J4" pin="3"/>
+      <node ref="R9" pin="2"/>
+    </net>
+    <net code="32" name="Net-(J4-Pad2)">
+      <node ref="J4" pin="2"/>
+      <node ref="R8" pin="2"/>
+      <node ref="U3" pin="10"/>
+    </net>
+    <net code="33" name="Net-(J4-Pad1)">
+      <node ref="U3" pin="9"/>
+      <node ref="J4" pin="1"/>
+      <node ref="R7" pin="2"/>
+    </net>
+    <net code="34" name="Net-(J1-Pad4)">
+      <node ref="U3" pin="4"/>
+      <node ref="U1" pin="11"/>
+      <node ref="J4" pin="11"/>
+      <node ref="U2" pin="11"/>
+      <node ref="J1" pin="4"/>
+    </net>
+    <net code="35" name="Net-(R2-Pad2)">
+      <node ref="U1" pin="12"/>
+      <node ref="R2" pin="2"/>
+      <node ref="U2" pin="12"/>
+    </net>
+    <net code="36" name="Net-(R3-Pad2)">
+      <node ref="R3" pin="2"/>
+      <node ref="U1" pin="9"/>
+      <node ref="U2" pin="9"/>
+    </net>
+    <net code="37" name="Net-(R4-Pad2)">
+      <node ref="U2" pin="8"/>
+      <node ref="U1" pin="8"/>
+      <node ref="R4" pin="2"/>
+    </net>
+    <net code="38" name="Net-(R5-Pad2)">
+      <node ref="U2" pin="6"/>
+      <node ref="U1" pin="6"/>
+      <node ref="R5" pin="2"/>
+    </net>
+    <net code="39" name="Net-(C5-Pad1)">
+      <node ref="U4" pin="2"/>
+      <node ref="S2" pin="2"/>
+      <node ref="C5" pin="1"/>
+    </net>
+    <net code="40" name="Net-(J3-Pad2)">
+      <node ref="J3" pin="2"/>
+      <node ref="S2" pin="1"/>
+    </net>
+  </nets>
+</export>
