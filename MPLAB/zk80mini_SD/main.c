@@ -57,7 +57,7 @@ unsigned int trans(unsigned char c){
 }
 // SD用修正 Load処理 zk8 tk8 bin
 // 8000hから読み出せる分を書き込み
-// ただし、83E0h～83FFh、F200h～への書込みは無視
+// ただし、83B0h～83D0h、83E0h～83FFh、F200h～への書込みは無視
 int readfile(unsigned char *imagefile){
 //ZK8、TK8、BINファイルをオープンし、メモリに読み込み
 //imagefile:ファイル名のポインタ
@@ -71,7 +71,7 @@ int readfile(unsigned char *imagefile){
 		if(i==0) break;
 		for(j=0;j<i;j++){
 			l = k*512+j;
-			if((l < 992)||((l > 1024) && (l < 29185))){RAM[l]=data[j];}
+			if((l < 944)||((l > 976) && (l < 992))||((l > 1023) && (l < 29184))){RAM[l]=data[j];}
 		}
 		k++;
 	}
@@ -85,7 +85,7 @@ int readfile(unsigned char *imagefile){
 
 // SD用修正 Load処理 btk
 // ヘッダに記述された開始位置から読み出せる分を書き込み
-// ただし、83E0h～83FFh、F200h～への書込みは無視
+// ただし、83B0h～83D0h、83E0h～83FFh、F200h～への書込みは無視
 int readfile2(unsigned char *imagefile){
 //BTKファイルをオープンし、メモリに読み込み
 //imagefile:ファイル名のポインタ
@@ -101,7 +101,7 @@ int readfile2(unsigned char *imagefile){
 		eadr=data[2]*256+data[3]+1;
 		padr=sadr;
 		for(j=0;j<i-4;j++){
-			if(((padr > 0x7FFF) && (padr < 0x83E0))||((padr > 0x83FF) && (padr < 0xF200))){
+			if(((padr > 0x7FFF) && (padr < 0x83B0))||((padr > 0x83D0) && (padr < 0x83E0))||((padr > 0x83FF) && (padr < 0xF200))){
 				RAM[padr - 0x8000]=data[j + 4];
 			}
 			padr=padr++;
@@ -111,7 +111,7 @@ int readfile2(unsigned char *imagefile){
 			i=FSfread(data,1,512,fp); //512バイト文字分読み込み。途中でEOFの場合、iに読み込んだバイト数
 			if(i==0) break;
 			for(j=0;j<i;j++){
-				if(((padr > 0x7FFF) && (padr < 0x83E0))||((padr > 0x83FF) && (padr < 0xF200))){
+				if(((padr > 0x7FFF) && (padr < 0x83B0))||((padr > 0x83D0) && (padr < 0x83E0))||((padr > 0x83FF) && (padr < 0xF200))){
 					RAM[padr - 0x8000]=data[j];
 				}
 				padr=padr++;
@@ -130,7 +130,7 @@ int readfile2(unsigned char *imagefile){
 }
 // SD用修正 Load処理 hex
 // hexファイルのヘッダに従って書き込み
-// ただし、83E0h～83FFh、F200h～への書込みは無視
+// ただし、83B0h～83D0h、83E0h～83FFh、F200h～への書込みは無視
 int readfile3(unsigned char *imagefile){
 //HEXファイルをオープンし、メモリに読み込み
 //imagefile:ファイル名のポインタ
@@ -151,7 +151,7 @@ int readfile3(unsigned char *imagefile){
 		if(sadr==0) sadr=dadr;
 		k=6;
 		for(j=0;j<dcnt;j++){
-			if(((dadr > 0x7FFF) && (dadr < 0x83E0))||((dadr > 0x83FF) && (dadr < 0xF200))){
+			if(((dadr > 0x7FFF) && (dadr < 0x83B0))||((dadr > 0x83D0) && (dadr < 0x83E0))||((dadr > 0x83FF) && (dadr < 0xF200))){
 				RAM[dadr - 0x8000]=trans(data[k])*16+trans(data[k+1]);
 			}
 			dadr++;
