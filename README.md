@@ -123,6 +123,10 @@ KUT KiCad Connector footprint libraryは、The MIT License (MIT)、
 ## 謝辞
 　ZK80miniを公開してくださったKatsumi様
 
+　　http://www.recfor.net/blog/mycom/index.php?itemid=883
+
 　SDカードアクセスライブラリを公開してくださったケンケン様
+
+　　http://www.ze.em-net.ne.jp/~kenken/bootloader/index.html
 
 　ありがとうございました。
