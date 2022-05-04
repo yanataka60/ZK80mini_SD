@@ -115,6 +115,7 @@ ZK80miniオリジナルに含まれるTK-80互換モニタープログラムを�
 
 ## 著作権について
 KUT KiCad Connector footprint libraryは、The MIT License (MIT)、
+
 それ以外は、すべてLGPL v2.0の元配布します。
 
 ## 謝辞
