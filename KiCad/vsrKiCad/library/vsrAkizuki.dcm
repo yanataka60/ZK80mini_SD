@@ -1,0 +1,18 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP MRUSB-2B-D14NI-S306
+D USB micro power connector
+K connector USB
+$ENDCMP
+#
+$CMP SW_Push_4P
+D Push button switch, generic, four pins
+K switch normally-open pushbutton push-button
+$ENDCMP
+#
+$CMP USB_microB
+D USB micro connector
+K connector USB
+$ENDCMP
+#
+#End Doc Library
