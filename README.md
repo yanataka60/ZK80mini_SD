@@ -3,6 +3,8 @@
 
 　SDカードのアクセスには、ケンケンさんが公開してくださっているSDカードアクセスライブラリを用いています。
 
+![ZK80mini_sd_1](https://github.com/yanataka60/ZK80mini_SD/blob/main/JPEG/ZK80mini_sd_1.JPG) ![ZK80mini_sd_2](https://github.com/yanataka60/ZK80mini_SD/blob/main/JPEG/ZK80mini_sd_2.JPG)
+
 ## 回路図
 ![回路図](https://github.com/yanataka60/ZK80mini_SD/blob/main/JPEG/schematic.jpg)
 
