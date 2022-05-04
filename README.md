@@ -2,11 +2,13 @@
 　Katsumiさんが公開してくださっている素晴らしいNEC TK-80互換機 ZK-80miniにSDカードによるLOAD、SAVEとスピーカーを載せてみました。
 
 　　KZ-80mini
+
 　　　　http://www.recfor.net/blog/mycom/index.php?itemid=883
 
 　SDカードのアクセスには、ケンケンさんが公開してくださっているSDカードアクセスライブラリを用いています。
 
 　　SDカードアクセスライブラリ
+
 　　　　http://www.ze.em-net.ne.jp/~kenken/bootloader/index.html
 
 ![ZK80mini_sd_1](https://github.com/yanataka60/ZK80mini_SD/blob/main/JPEG/ZK80mini_sd_1.JPG)
