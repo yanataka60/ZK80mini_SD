@@ -1,7 +1,7 @@
 (fp_lib_table
-  (lib (name vsrAkizuki)(type KiCad)(uri ${KIPRJMOD}/vsrKiCad-master/footprint/vsrAkizuki.pretty)(options "")(descr ""))
-  (lib (name vsrMCU)(type KiCad)(uri ${KIPRJMOD}/vsrKiCad-master/footprint/vsrMCU.pretty)(options "")(descr ""))
-  (lib (name vsrMONOWIRELESS)(type KiCad)(uri ${KIPRJMOD}/vsrKiCad-master/footprint/vsrMONOWIRELESS.pretty)(options "")(descr ""))
-  (lib (name vsrXiamen)(type KiCad)(uri ${KIPRJMOD}/vsrKiCad-master/footprint/vsrXiamen.pretty)(options "")(descr ""))
-  (lib (name KUT_Connector)(type KiCad)(uri ${KIPRJMOD}/KUT_Connector.pretty-master)(options "")(descr ""))
+  (lib (name vsrAkizuki)(type KiCad)(uri ${KIPRJMOD}/vsrKiCad/footprint/vsrAkizuki.pretty)(options "")(descr ""))
+  (lib (name vsrMCU)(type KiCad)(uri ${KIPRJMOD}/vsrKiCad/footprint/vsrMCU.pretty)(options "")(descr ""))
+  (lib (name vsrMONOWIRELESS)(type KiCad)(uri ${KIPRJMOD}/vsrKiCad/footprint/vsrMONOWIRELESS.pretty)(options "")(descr ""))
+  (lib (name vsrXiamen)(type KiCad)(uri ${KIPRJMOD}/vsrKiCad/footprint/vsrXiamen.pretty)(options "")(descr ""))
+  (lib (name KUT_Connector)(type KiCad)(uri ${KIPRJMOD}/KUT_Connector_pretty)(options "")(descr ""))
 )
