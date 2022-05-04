@@ -131,6 +131,7 @@ void writeIO(UINT8 addrL, UINT8 addrH, UINT8 data){
                                    RAM[0x03EC]=0xE0;
      		                       RAM[0x03ED]=0xE0;
                       } else {
+// SD—pC³ FileNo.zk8‚ª‚ ‚ê‚ÎLoadˆ—
                               i=readfile(fname);
 					          if(i!=0){
 // SD—pC³ FileNo.tk8 FileNo.bin FileNo.btk FileNo.hex‚Ì‚¢‚Ã‚ê‚©‚ª‚ ‚ê‚ÎLoadˆ—
