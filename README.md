@@ -134,7 +134,7 @@
 ## 著作権について
 　KUT KiCad Connector footprint libraryは、The MIT License (MIT)、
 
-　SDカードライブラリのSDFSIO.hについては、SDFSIO.hに書かれているライセンス、
+　SDカードライブラリのlibsdfsio.a、SDFSIO.hについては、ケンケンさんが公開しているMicrochip社のライブラリを利用しました。(SDFSIO.hにライセンスの記載在り)、
 
 　それ以外は、ZK-80miniのライセンスと同様にすべてLGPL v2.0の元配布します。
 
@@ -146,4 +146,4 @@
 　ありがとうございました。
 
 ## 追記
-2022.5.5 LOAD除外範囲を修正、著作権表記を修正。libsdfsio.aのライセンスについては現在確認中です。
+2022.5.5 LOAD除外範囲を修正、著作権表記を修正。
