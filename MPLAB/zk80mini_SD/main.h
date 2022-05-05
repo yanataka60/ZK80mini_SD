@@ -8,7 +8,7 @@
 #include <p32xxxx.h>
 #include <plib.h>
 
-// SD用修正 テストプログラム MAIN.Cから移動
+
 /* Global variables follow */
 
 static const unsigned char PROG[]={
@@ -38,13 +38,11 @@ JP    loop:
 #define TIMR1HSTEP (1<<TIMER1LEN)
 
 #ifdef MAIN
-// SD用修正 RAM増加 8000H-F1FFH
 	unsigned char RAM[0x7200] __attribute__((persistent)); // 28KB RAM
 	volatile unsigned long g_timer1;
 	volatile unsigned long g_TMR1h;
 	volatile unsigned char g_keymatrix[3];
 #else
-// SD用修正 RAM増加 8000H-F1FFH
 	extern unsigned char RAM[0x7200];
 	extern volatile unsigned long g_timer1;
 	extern volatile unsigned long g_TMR1h;

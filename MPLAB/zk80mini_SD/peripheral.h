@@ -12,11 +12,9 @@
 */
 
 // _getCode() macro (as inline function) that fetches a code using PC, and increment PC.
-// SD用修正 LIBRARY用ヘッダファイル
 #include "SDFSIO.h"
 #include "stdio.h"
 
-// SD用修正 RAM増加 8000H-F1FFH
 #define _getCode() (\
 	(regPC<0x0300) ? ROM[regPC++] :(\
 	(0x7FFF<regPC && regPC<0xF200) ? RAM[(regPC++)&0x7FFF] : 0xFF\
@@ -36,9 +34,14 @@ unsigned char readMemory(UINT16 addr){
 		return ROM[addr];
 	} else if (addr<0x8000) {
 		return 0xFF; // RST 38
-// SD用修正 RAM増加 8000H-F1FFH
 	} else if (addr<0xF200) {
 		return RAM[addr&0x7FFF];
+
+	} else if (addr==0xFFFF) {
+		for(i=0;i<sizeof PROG;i++){
+			RAM[i]=PROG[i];
+  		} 		
+		return 0xA0; // RST 38
     } else {
 		return 0xFF; // RST 38
 	}
@@ -49,7 +52,6 @@ void writeMemory(UINT16 addr, UINT8 data){
 	data&=0xff;
 	if (addr<0x8000) {
 		return;
-// SD用修正 RAM増加 8000H-F1FFH
 	} else if (addr<0xF200) {
 		RAM[addr&0x7FFF]=data;
 	} else {
@@ -76,22 +78,18 @@ unsigned char readIO(UINT8 addrL, UINT8 addrH){
 }
 // writeIO() function
 void writeIO(UINT8 addrL, UINT8 addrH, UINT8 data){
-// SD用修正
 	long i,j;
 	unsigned char fname[10];
 	unsigned char ramH,ramL;
 	// Key input support
 	switch (addrL) {
 		case 0x9e: // Event handler 
-// SD用修正 FileNo取得
 			j=RAM[0x03EC]+RAM[0x03ED]*256;
 			ramL=RAM[0x03EC];
 			ramH=RAM[0x03ED];
 			sprintf(fname,"%04x.zk8",j);
 			switch (data) {
-// SD用修正 Save処理
 				case 0x00: // STORE DATA
-// SD用修正 FileNoは8000～FFFF、0000～7FFFは読み出し用
 					if (j > 0x7FFF) {
 						//Initialize the media
 						ANSELA=0x13;
@@ -99,7 +97,6 @@ void writeIO(UINT8 addrL, UINT8 addrH, UINT8 data){
 						//ファイルシステム初期化
 						if(FSInit())
 							{i=writefile(fname);  }   
-// SD用修正 SDカード常に挿入状態しか検出できないため常にi=0
 						if(i==0){
 							RAM[0x03EC]=0xC0;
 							RAM[0x03ED]=0xC0;
@@ -112,7 +109,6 @@ void writeIO(UINT8 addrL, UINT8 addrH, UINT8 data){
 						RAM[0x03EE]=ramL;
 						RAM[0x03EF]=ramH;
 					} else {
-// SD用修正 FileNoに8000未満は指定不可
 						RAM[0x03EC]=0xEE;
 						RAM[0x03ED]=0xEE;
 						RAM[0x03EE]=ramL;
@@ -127,14 +123,11 @@ void writeIO(UINT8 addrL, UINT8 addrH, UINT8 data){
 					RAM[0x03EE]=ramL;
 					RAM[0x03EF]=ramH;
 					if(!FSInit()) {
-// SD用修正 SDカード未挿入(ディレクトリが読めなかった)エラー
                                    RAM[0x03EC]=0xE0;
      		                       RAM[0x03ED]=0xE0;
                       } else {
-// SD用修正 FileNo.zk8があればLoad処理
                               i=readfile(fname);
 					          if(i!=0){
-// SD用修正 FileNo.tk8 FileNo.bin FileNo.btk FileNo.hexのいづれかがあればLoad処理
 					                   sprintf(fname,"%04x.tk8",j);
 							           FSInit();
                                        i=readfile(fname);

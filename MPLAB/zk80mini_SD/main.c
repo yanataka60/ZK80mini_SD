@@ -7,7 +7,6 @@
 
 #define MAIN
 #include "main.h"
-// SD用修正 LIBRARY追加 
 #include "SDFSIO.h"
 
 // Clock settings
@@ -20,7 +19,7 @@
 // Div 2 to make 4 MHz
 #pragma config FPLLIDIV = DIV_2
 // Mul 24 to make 80 MHz
-#pragma config FPLLMUL = MUL_20
+#pragma config FPLLMUL = MUL_21
 // Div 2 to make 40 MHz
 #pragma config FPLLODIV = DIV_2
 // PBCLK = SYSCLK
@@ -45,19 +44,14 @@
 // protection all off
 #pragma config PWP = OFF, BWP = OFF, CP = OFF
 
-// SD用修正
 unsigned char data[512]; //ファイル読み込みバッファ
 
-// SD用修正 ASCIIコードから16進数へ変換
 unsigned int trans(unsigned char c){
 	if('0'<=c && '9'>=c) return (c-0x30);//0x30は'0'の文字コード
 	if('A'<=c && 'F'>=c) return (c+0x0A-0x41);//0x41は'A'の文字コード
 	if('a'<=c && 'f'>=c) return (c+0x0A-0x61);//0x61は'a'の文字コード
 	return 0;
 }
-// SD用修正 Load処理 zk8 tk8 bin
-// 8000hから読み出せる分を書き込み
-// ただし、83B0h～83D0h、83E0h～83FFh、F200h～への書込みは無視
 int readfile(unsigned char *imagefile){
 //ZK8、TK8、BINファイルをオープンし、メモリに読み込み
 //imagefile:ファイル名のポインタ
@@ -83,9 +77,6 @@ int readfile(unsigned char *imagefile){
 	return 0;
 }
 
-// SD用修正 Load処理 btk
-// ヘッダに記述された開始位置から読み出せる分を書き込み
-// ただし、83B0h～83D0h、83E0h～83FFh、F200h～への書込みは無視
 int readfile2(unsigned char *imagefile){
 //BTKファイルをオープンし、メモリに読み込み
 //imagefile:ファイル名のポインタ
@@ -128,9 +119,6 @@ int readfile2(unsigned char *imagefile){
 	RAM[0x03EF]=sadr / 256;
 	return 0;
 }
-// SD用修正 Load処理 hex
-// hexファイルのヘッダに従って書き込み
-// ただし、83B0h～83D0h、83E0h～83FFh、F200h～への書込みは無視
 int readfile3(unsigned char *imagefile){
 //HEXファイルをオープンし、メモリに読み込み
 //imagefile:ファイル名のポインタ
@@ -166,7 +154,6 @@ int readfile3(unsigned char *imagefile){
 	RAM[0x03EF]=sadr / 256;
 	return 0;
 }
-// SD用修正 Save処理
 int writefile(unsigned char *imagefile){
 //ファイルをオープンし、メモリの内容を書き出し
 //imagefile:ファイル名のポインタ
@@ -175,7 +162,6 @@ int writefile(unsigned char *imagefile){
 
 	fp=FSfopen(imagefile,"w");//書き出しでオープン
 	if(fp==NULL) return -1; //ファイルオープンエラー
-// SD用修正 Saveは単純に8000hから57*512Byte(8000h～F1FFh)をSave
 		for(k=0;k<57;k++){
 			for(j=0;j<512;j++){
 				data[j]=RAM[k*512+j];
@@ -191,10 +177,9 @@ void main(){
 	// Weak pull up for RB3
 	CNPUB=0x08;
 	// RA1, RA2, RA3, RB2, RB3: digital inputs but not analog ones
-// SD用修正
 	ANSELA=0x11;
 	ANSELB=0xF3;
-// SD用修正 ブザー接続用(RA1)
+// ブザー接続用(RA1)
 // SD-CARD CDと兼用、SD-CARDにアクセスするときには入力に設定
 	TRISA=0x1D;
 	LATA=0x00;
@@ -208,7 +193,6 @@ void main(){
 	// See main.h; RAM is set as persistent.
 	if (RCONbits.POR){
 		RCONbits.POR=0;
-// SD用修正 電源ON時のみRAMクリアし、テストプログラムをLOAD
 		for(i=0;i<0x7200;i++){
 			RAM[i]=0x00;
 		}
@@ -217,7 +201,7 @@ void main(){
 		}
 	}
 
-// SD用修正 周辺機能ピン割り当て
+    // 周辺機能ピン割り当て
 	SDI2R=2; //RPA4:SDI2
 	RPB8R=4; //RPB8:SDO2
 
