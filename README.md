@@ -134,7 +134,9 @@
 ## 著作権について
 　KUT KiCad Connector footprint libraryは、The MIT License (MIT)、
 
-　それ以外は、すべてLGPL v2.0の元配布します。
+　SDカードライブラリについては、SDFSIO.hに書かれているライセンス、
+
+　それ以外は、ZK-80miniのライセンスと同様にすべてLGPL v2.0の元配布します。
 
 ## 謝辞
 　ZK80miniを公開してくださったKatsumi様
