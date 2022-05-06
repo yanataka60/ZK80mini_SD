@@ -9,6 +9,7 @@
 #include <plib.h>
 
 
+// yanataka customize start
 /* Global variables follow */
 
 static const unsigned char PROG[]={
@@ -32,11 +33,13 @@ LD    (HL),C
 JP    loop:
 */
 };
+// yanataka customize end
 
 //#define TIMER1LEN 13
 #define TIMER1LEN 13
 #define TIMR1HSTEP (1<<TIMER1LEN)
 
+// yanataka customize start
 #ifdef MAIN
 	unsigned char RAM[0x7200] __attribute__((persistent)); // 28KB RAM
 	volatile unsigned long g_timer1;
@@ -48,6 +51,7 @@ JP    loop:
 	extern volatile unsigned long g_TMR1h;
 	extern volatile unsigned char g_keymatrix[3];
 #endif
+// yanataka customize end
 
 /* Prototyping */
 

@@ -12,9 +12,12 @@
 */
 
 // _getCode() macro (as inline function) that fetches a code using PC, and increment PC.
+// yanataka customize start
 #include "SDFSIO.h"
 #include "stdio.h"
+// yanataka customize end
 
+// yanataka customize
 #define _getCode() (\
 	(regPC<0x0300) ? ROM[regPC++] :(\
 	(0x7FFF<regPC && regPC<0xF200) ? RAM[(regPC++)&0x7FFF] : 0xFF\
@@ -28,12 +31,14 @@ UINT8 getCode(){
 //*/
 
 unsigned char readMemory(UINT16 addr){
+// yanataka customize
 	long i;
 	addr&=0xffff;
 	if (addr<0x0300) {
 		return ROM[addr];
 	} else if (addr<0x8000) {
 		return 0xFF; // RST 38
+// yanataka customize start
 	} else if (addr<0xF200) {
 		return RAM[addr&0x7FFF];
 
@@ -43,6 +48,7 @@ unsigned char readMemory(UINT16 addr){
   		} 		
 		return 0xA0; // RST 38
     } else {
+// yanataka customize end
 		return 0xFF; // RST 38
 	}
 }
@@ -52,8 +58,10 @@ void writeMemory(UINT16 addr, UINT8 data){
 	data&=0xff;
 	if (addr<0x8000) {
 		return;
+// yanataka customize start
 	} else if (addr<0xF200) {
 		RAM[addr&0x7FFF]=data;
+// yanataka customize end
 	} else {
 		return;
 	}
@@ -76,6 +84,7 @@ unsigned char readIO(UINT8 addrL, UINT8 addrH){
 			return 0xFF;
 	}
 }
+// yanataka customize start
 // writeIO() function
 void writeIO(UINT8 addrL, UINT8 addrH, UINT8 data){
 	long i,j;
@@ -172,17 +181,20 @@ void writeIO(UINT8 addrL, UINT8 addrH, UINT8 data){
 			 } else {
 			   LATA=0x00;}
 			return;
+// yanataka customize end
 		case 0xfa: // Set row in key matrix (TK-80)
 			g_portc=data;
 			g_porta=0xff;
 			if (!(data&0x10)) g_porta&=g_keymatrix[0];
 			if (!(data&0x20)) g_porta&=g_keymatrix[1];
 			if (!(data&0x40)) g_porta&=g_keymatrix[2];
+// yanataka customize start
 // ブザー接続用(TK80用 8255 PC1 ONで RA1出力)
 			if (data&0x02)
 			 { LATA=0x02;
 			 } else {
 			   LATA=0x00;}
+// yanataka customize end
 			return;
 		case 0xfb: // 8255 control (TK-80)
 			if (data&0x80) return; // Ignore mode change.
@@ -194,11 +206,13 @@ void writeIO(UINT8 addrL, UINT8 addrH, UINT8 data){
 			if (!(data&0x10)) g_porta&=g_keymatrix[0];
 			if (!(data&0x20)) g_porta&=g_keymatrix[1];
 			if (!(data&0x40)) g_porta&=g_keymatrix[2];
+// yanataka customize start
 // ブザー接続用(TK80用 8255 PC1 ONで RA1出力)
 			if (data&0x02)
 			 { LATA=0x02;
 			 } else {
 			   LATA=0x00;}
+// yanataka customize end
 			return;
 		default:
 			return;

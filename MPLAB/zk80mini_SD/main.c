@@ -7,6 +7,7 @@
 
 #define MAIN
 #include "main.h"
+// yanataka customize
 #include "SDFSIO.h"
 
 // Clock settings
@@ -19,6 +20,7 @@
 // Div 2 to make 4 MHz
 #pragma config FPLLIDIV = DIV_2
 // Mul 24 to make 80 MHz
+// yanataka customize
 #pragma config FPLLMUL = MUL_21
 // Div 2 to make 40 MHz
 #pragma config FPLLODIV = DIV_2
@@ -44,6 +46,7 @@
 // protection all off
 #pragma config PWP = OFF, BWP = OFF, CP = OFF
 
+// yanataka customize start
 unsigned char data[512]; //ファイル読み込みバッファ
 
 unsigned int trans(unsigned char c){
@@ -171,18 +174,22 @@ int writefile(unsigned char *imagefile){
 	FSfclose(fp); //ファイルクローズ
 	return 0;
 }
+// yanataka customize end
 
 void main(){
 	long i;
 	// Weak pull up for RB3
 	CNPUB=0x08;
 	// RA1, RA2, RA3, RB2, RB3: digital inputs but not analog ones
+    // yanataka customize
 	ANSELA=0x11;
 	ANSELB=0xF3;
 // ブザー接続用(RA1)
 // SD-CARD CDと兼用、SD-CARDにアクセスするときには入力に設定
+    // yanataka customize start
 	TRISA=0x1D;
 	LATA=0x00;
+    // yanataka customize end
 	// Initialize interface (TRISB will be also set here.)
 	init_led();
 	// Other initializations
@@ -193,17 +200,21 @@ void main(){
 	// See main.h; RAM is set as persistent.
 	if (RCONbits.POR){
 		RCONbits.POR=0;
+    // yanataka customize start
 		for(i=0;i<0x7200;i++){
 			RAM[i]=0x00;
 		}
+    // yanataka customize end
 		for(i=0;i<sizeof PROG;i++){
 			RAM[i]=PROG[i];
 		}
 	}
 
+    // yanataka customize start
     // 周辺機能ピン割り当て
 	SDI2R=2; //RPA4:SDI2
 	RPB8R=4; //RPB8:SDO2
+    // yanataka customize end
 
 	while(1){
 		// Wait until next timing to execute Z80 code
