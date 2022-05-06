@@ -73,6 +73,8 @@ int readfile(unsigned char *imagefile){
 		k++;
 	}
 	FSfclose(fp); //ファイルクローズ
+	TRISA=0x1D;
+	LATA=0x00;
 	RAM[0x03EC]=( 0x8000 + l ) % 256;
 	RAM[0x03ED]=( 0x8000 + l ) / 256;
 	RAM[0x03EE]=0x8000 % 256;
@@ -116,6 +118,8 @@ int readfile2(unsigned char *imagefile){
 
 	FSfclose(fp); //ファイルクローズ
 	eadr--;
+	TRISA=0x1D;
+	LATA=0x00;
 	RAM[0x03EC]=eadr % 256;
 	RAM[0x03ED]=eadr / 256;
 	RAM[0x03EE]=sadr % 256;
@@ -151,6 +155,8 @@ int readfile3(unsigned char *imagefile){
 	}
 	eadr=dadr-1;
 	FSfclose(fp); //ファイルクローズ
+	TRISA=0x1D;
+	LATA=0x00;
 	RAM[0x03EC]=eadr % 256;
 	RAM[0x03ED]=eadr / 256;
 	RAM[0x03EE]=sadr % 256;
@@ -172,6 +178,8 @@ int writefile(unsigned char *imagefile){
 			i=FSfwrite(data,1,512,fp); //512バイト文字分書き出し。
 		}
 	FSfclose(fp); //ファイルクローズ
+	TRISA=0x1D;
+	LATA=0x00;
 	return 0;
 }
 // yanataka customize end

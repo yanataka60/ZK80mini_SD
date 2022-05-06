@@ -101,7 +101,7 @@ void writeIO(UINT8 addrL, UINT8 addrH, UINT8 data){
 				case 0x00: // STORE DATA
 					if (j > 0x7FFF) {
 						//Initialize the media
-						ANSELA=0x13;
+						TRISA=0x1F;
     					while (!MDD_MediaDetect()) ; //SDカード検出待ち
 						//ファイルシステム初期化
 						if(FSInit())
@@ -113,8 +113,6 @@ void writeIO(UINT8 addrL, UINT8 addrH, UINT8 data){
 							RAM[0x03EC]=0xFF;
 							RAM[0x03ED]=0xFF;
    						}			
-						ANSELA=0x11;
-						TRISA=0x1D;
 						RAM[0x03EE]=ramL;
 						RAM[0x03EF]=ramH;
 					} else {
@@ -126,7 +124,7 @@ void writeIO(UINT8 addrL, UINT8 addrH, UINT8 data){
 					return;
 				case 0x01: // LOAD DATA
 				    //Initialize the media
-					ANSELA=0x13;
+					TRISA=0x1F;
     				while (!MDD_MediaDetect()) ; //SDカード検出待ち
 					//ファイルシステム初期化
 					RAM[0x03EE]=ramL;
@@ -161,8 +159,6 @@ void writeIO(UINT8 addrL, UINT8 addrH, UINT8 data){
 						               }
    					          }
                     }          
-					ANSELA=0x11;
-					TRISA=0x1D;
 					return;
 				default:
 					return;
