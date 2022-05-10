@@ -85,22 +85,22 @@
 　また、ICSPに繋ぐピンをLED、キーボードと兼用していますのでPICKit3をICSPに接続したままキーボード操作をすると誤動作します。(2、7、LOAD DATAのキーが効きません。書き込みは正常に行えます。)
 
 #### TK-80正規モニターに差し替える場合は、TK-80正規モニターに以下の修正を加えて差し替えてください。
-00D5: AF                    XOR     A
+00D5: AF　　　　　　XOR　A
 
-00D6: D3 9E                 OUT     (9Eh),A
+00D6: D3 9E 　　　　OUT　(9Eh),A
 
-00D8: CD A1 01              CALL    01A1h
+00D8: CD A1 01　　　CALL　01A1h
 
-00DB: C3 51 00              JP      0051h
+00DB: C3 51 00　　　JP　0051h
 
 
-0107: 3E 01                 LD      A,01h
+0107: 3E 01 　　　　LD　A,01h
 
-0109: D3 9E                 OUT     (9Eh),A
+0109: D3 9E 　　　　OUT　(9Eh),A
 
-010B: CD A1 01              CALL    01A1h
+010B: CD A1 01　　　CALL　01A1h
 
-010E: C3 51 00              JP      0051h
+010E: C3 51 00　　　JP　0051h
 
 ## SAVE
 　ファイルNo(xxxx)を8000～FFFFの16進数4桁で入力して「STORE DATA」キーを押します。
